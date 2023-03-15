@@ -1,0 +1,1336 @@
+@prefix :         <http://ontofox.hegroup.org/4xnfp0p2.owl#> .
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix efo:      <http://www.ebi.ac.uk/efo/> .
+@prefix obo:      <http://purl.obolibrary.org/obo/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix owl2:     <http://www.w3.org/2006/12/owl2#> .
+@prefix protege:  <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix ql:       <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml:      <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr:       <http://www.w3.org/ns/r2rml#> .
+@prefix terms:    <http://purl.org/dc/terms/> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+obo:NCIT_C153189  rdf:type        owl:Class ;
+        rdfs:label                "Transcriptomics" ;
+        rdfs:subClassOf           obo:OBI_0000070 ;
+        obo:IAO_0000115           "A study of the complete set of RNA transcripts that are produced by the genome, under specific circumstances or in a specific cell." ;
+        obo:IAO_0000412           <http://purl.obolibrary.org/obo/merged/NCIT> ;
+        obo:NCIT_A32              obo:NCIT_C175886 ;
+        obo:NCIT_NHC0             "C153189" ;
+        obo:NCIT_P106             "Biomedical Occupation or Discipline" ;
+        obo:NCIT_P108             "Transcriptomics" ;
+        obo:NCIT_P208             "CL554319" ;
+        obo:NCIT_P322             "GDC" ;
+        obo:NCIT_P375             "Transcriptome Profiling" ;
+        oboInOwl:hasExactSynonym  "Transcriptome Profiling" , "Transcriptomics" ;
+        oboInOwl:inSubset         <http://purl.oboInOwllibrary.org/oboInOwl/NCIT_C177537> , <http://purl.oboInOwllibrary.org/oboInOwl/NCIT_C157711> .
+
+obo:OBI_0000293  rdf:type   owl:ObjectProperty , rdf:Property ;
+        rdfs:domain         obo:OBI_0000011 ;
+        rdfs:label          "has_specified_input"@en , "has_specified_input" ;
+        rdfs:subPropertyOf  obo:RO_0000057 ;
+        obo:IAO_0000111     "has_specified_input"@en , "has_specified_input" ;
+        obo:IAO_0000112     "see is_input_of example_of_usage"@en ;
+        obo:IAO_0000114     obo:IAO_0000122 ;
+        obo:IAO_0000115     "The inverse property of is_specified_input_of"@en ;
+        obo:IAO_0000116     "8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how 'has participant' works." ;
+        obo:IAO_0000117     "PERSON: Larry Hunter" , "PERSON: Bjoern Peters" , "PERSON: Alan Ruttenberg"@en , "PERSON: Melanie Coutot" ;
+        obo:IAO_0000412     obo:obi.owl , <http://purl.obolibrary.org/obo/merged/OBI> .
+
+<http://project-genesis.io/ontology#GEN_000029>
+        rdf:type         owl:Class ;
+        rdfs:label       "sampling time datum" ;
+        rdfs:subClassOf  obo:IAO_0000027 .
+
+obo:NCIT_NHC0  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "code" ;
+        protege:readOnly          "true" ;
+        obo:IAO_0000115           "A property representing a concept unique identifier within the NCI Enterprise Vocabulary Service's NCI Thesaurus." ;
+        obo:NCIT_NHC0             "NHC0" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P108             "code" ;
+        oboInOwl:hasExactSynonym  "code" .
+
+<http://project-genesis.io/ontology#GEN_000008>
+        rdf:type         owl:Class ;
+        rdfs:label       "Growth Medium composition" ;
+        rdfs:subClassOf  obo:IAO_0000030 .
+
+obo:BFO_0000015  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "process"@en , "process" ;
+        rdfs:subClassOf   obo:BFO_0000003 ;
+        obo:BFO_0000179   "process" ;
+        obo:BFO_0000180   "Process" ;
+        obo:IAO_0000112   "a process of cell-division, \\ a beating of the heart"@en , "your process of aging."@en , "the course of a disease"@en , "the life of an organism"@en , "a process of meiosis"@en , "a process of sleeping"@en , "the flight of a bird"@en ;
+        obo:IAO_0000115   "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
+        obo:IAO_0000116   "BFO 2 Reference: The realm of occurrents is less pervasively marked by the presence of natural units than is the case in the realm of independent continuants. Thus there is here no counterpart of ‘object’. In BFO 1.0 ‘process’ served as such a counterpart. In BFO 2.0 ‘process’ is, rather, the occurrent counterpart of ‘material entity’. Those natural – as contrasted with engineered, which here means: deliberately executed – units which do exist in the realm of occurrents are typically either parasitic on the existence of natural units on the continuant side, or they are fiat in nature. Thus we can count lives; we can count football games; we can count chemical reactions performed in experiments or in chemical manufacturing. We cannot count the processes taking place, for instance, in an episode of insect mating behavior.Even where natural units are identifiable, for example cycles in a cyclical process such as the beating of a heart or an organism’s sleep/wake cycle, the processes in question form a sequence with no discontinuities (temporal gaps) of the sort that we find for instance where billiard balls or zebrafish or planets are separated by clear spatial gaps. Lives of organisms are process units, but they too unfold in a continuous series from other, prior processes such as fertilization, and they unfold in turn in continuous series of post-life processes such as post-mortem decay. Clear examples of boundaries of processes are almost always of the fiat sort (midnight, a time of death as declared in an operating theater or on a death certificate, the initiation of a state of war)"@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000602   "(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] " .
+
+obo:NCIT_A32  rdf:type            owl:AnnotationProperty ;
+        rdfs:label                "Is_Value_For_GDC_Property" ;
+        obo:IAO_0000115           "An association that that connects a concept representing a GDC value to any associated GDC property concept(s)." ;
+        obo:NCIT_NHC0             "A32" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P108             "Is_Value_For_GDC_Property" ;
+        oboInOwl:hasExactSynonym  "Is_Value_For_GDC_Property" .
+
+obo:FOODON_03411345  rdf:type  owl:Class ;
+        rdfs:label          "yeast"@en , "yeast" ;
+        rdfs:subClassOf     obo:BFO_0000040 ;
+        obo:IAO_0000114     obo:IAO_0000428 ;
+        obo:IAO_0000115     "Yeasts are eukaryotic micro-organisms classified in the kingdom *Fungi*, with 1,500 species currently described estimated to be only 1% of all fungal species."@en ;
+        obo:IAO_0000119     "WIKIPEDIA:Yeast" ;
+        obo:IAO_0000412     "http://langual.org" ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/FOODON> ;
+        oboInOwl:hasDbXref  "http://www.langual.org/langual_thesaurus.asp?termid=B1345" .
+
+obo:IAO_0000116  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "editor note"@en ;
+        obo:IAO_0000111   "editor note"@en ;
+        obo:IAO_0000114   obo:IAO_0000122 ;
+        obo:IAO_0000115   "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology."@en ;
+        obo:IAO_0000117   "PERSON:Daniel Schober"@en ;
+        obo:IAO_0000119   "GROUP:OBI:<http://purl.obfoundry.org/obo/obi>"@en , "GROUP:OBI:<http://purl.obofoundry.org/obo/obi>"@en .
+
+<http://project-genesis.io/ontology#GEN_000037>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:ENVO_01001815 ;
+        rdfs:label          "has specified growth medium" ;
+        rdfs:range          obo:NCIT_C85504 ;
+        rdfs:subPropertyOf  obo:OBI_0000293 .
+
+obo:NCIT_P325  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "ALT_DEFINITION" ;
+        obo:IAO_0000115           "A property representing the English language definition of a concept from a source other than NCI." ;
+        obo:NCIT_NHC0             "P325" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P107             "[source] Definition" ;
+        obo:NCIT_P108             "ALT_DEFINITION" ;
+        oboInOwl:hasExactSynonym  "ALT_DEFINITION" .
+
+<http://project-genesis.io/ontology#GEN_000016>
+        rdf:type            rdf:Property ;
+        rdfs:domain         <http://project-genesis.io/ontology#GEN_000003> ;
+        rdfs:label          "has stated flow rate" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000002> ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+obo:UO_0000196  rdf:type  owl:NamedIndividual , obo:UO_0000051 ;
+        rdfs:label       "pH" ;
+        obo:IAO_0000111  "pH" ;
+        obo:IAO_0000115  "A dimensionless concentration notation which denotes the acidity of a solution in terms of activity of hydrogen ions (H+)." ;
+        obo:IAO_0000412  obo:uo.owl .
+
+obo:IAO_0000600  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "elucidation"@en .
+
+obo:UO_0000175  rdf:type  owl:NamedIndividual , obo:UO_0000051 ;
+        rdfs:label       "gram per liter" , "gram per litre" ;
+        obo:IAO_0000111  "gram per liter" ;
+        obo:IAO_0000115  "A mass unit density which is equal to mass of an object in grams divided by the volume in liters." ;
+        obo:IAO_0000118  "g per L" , "g/L" ;
+        obo:IAO_0000412  obo:uo.owl .
+
+obo:RO_0000053  rdf:type    owl:InverseFunctionalProperty , rdf:Property , owl:ObjectProperty ;
+        rdfs:label          "has characteristic"@en , "bearer of" ;
+        rdfs:range          obo:BFO_0000020 ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        obo:IAO_0000111     "bearer of"@en ;
+        obo:IAO_0000112     "this apple is bearer of this red color"@en , "this vase is bearer of this fragility"@en ;
+        obo:IAO_0000115     "Inverse of characteristic_of"@en ;
+        obo:IAO_0000116     "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
+        obo:IAO_0000118     "is bearer of"@en , "bearer_of"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/RO> ;
+        obo:RO_0001900      obo:RO_0001901 .
+
+obo:OGG_0000000002  rdf:type  owl:Class ;
+        rdfs:label       "gene"@en , "gene" ;
+        rdfs:subClassOf  obo:BFO_0000040 ;
+        obo:IAO_0000115  "A gene is a material entity that represents the entire DNA sequence required for synthesis of a functional protein or RNA molecule. " ;
+        obo:IAO_0000117  "Oliver He" ;
+        obo:IAO_0000119  "WEB: http://www.ncbi.nlm.nih.gov/books/NBK21640/" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OGG> .
+
+obo:BFO_0000002  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "continuant"@en , "continuant" ;
+        rdfs:subClassOf   obo:BFO_0000001 ;
+        obo:BFO_0000179   "continuant" ;
+        obo:BFO_0000180   "Continuant" ;
+        obo:IAO_0000116   "BFO 2 Reference: Continuant entities are entities which can be sliced to yield parts only along the spatial dimension, yielding for example the parts of your table which we call its legs, its top, its nails. ‘My desk stretches from the window to the door. It has spatial parts, and can be sliced (in space) in two. With respect to time, however, a thing is a continuant.’ [60, p. 240"@en , "Continuant doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. For example, in an expansion involving bringing in some of Ceuster's other portions of reality, questions are raised as to whether universals are continuants"@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000600   "A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity. (axiom label in BFO2 Reference: [008-002])"@en ;
+        obo:IAO_0000601   "if b is a material entity, then there is some temporal interval (referred to below as a one-dimensional temporal region) during which b exists. (axiom label in BFO2 Reference: [011-002])"@en , "if b is a continuant and if, for some t, c has_continuant_part b at t, then c is a continuant. (axiom label in BFO2 Reference: [126-001])"@en , "if b is a continuant and if, for some t, cis continuant_part of b at t, then c is a continuant. (axiom label in BFO2 Reference: [009-002])"@en ;
+        obo:IAO_0000602   "(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] " , "(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] " , "(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] " , "(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] " .
+
+obo:IAO_0000003  rdf:type  owl:Class ;
+        rdfs:label       "measurement unit label"@en , "measurement unit label" ;
+        rdfs:subClassOf  obo:IAO_0000009 ;
+        obo:IAO_0000111  "measurement unit label"@en ;
+        obo:IAO_0000112  "Examples of measurement unit labels are liters, inches, weight per volume."@en ;
+        obo:IAO_0000114  obo:IAO_0000125 ;
+        obo:IAO_0000115  "A measurement unit label is as a label that is part of a scalar measurement datum and denotes a unit of measure."@en ;
+        obo:IAO_0000116  "2009-03-16: review of this term done during during the OBI workshop winter 2009 and the current definition was considered acceptable for use in OBI. If there is a need to modify this definition please notify OBI."@en , "2009-03-16: provenance: a term measurement unit was\nproposed for OBI (OBI_0000176) , edited by Chris Stoeckert and\nCristian Cocos, and subsequently moved to IAO where the objective for\nwhich the original term was defined was satisfied with the definition\nof this, different, term."@en ;
+        obo:IAO_0000117  "PERSON: Alan Ruttenberg"@en , "PERSON: Melanie Courtot"@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/IAO> .
+
+owl:topDataProperty  rdf:type  rdf:Property ;
+        rdfs:label          "owl:topDataProperty" ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+obo:NCIT_P375  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "Maps_To" ;
+        obo:IAO_0000115           "A property representing that a term in another terminology has been mapped to a term in NCIt and describes the relationship between the mapped terms." ;
+        obo:NCIT_NHC0             "P375" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P108             "Maps_To" ;
+        oboInOwl:hasExactSynonym  "Maps_To" .
+
+obo:CHEBI_23367  rdf:type           owl:Class ;
+        rdfs:label                  "molecular entity" ;
+        rdfs:subClassOf             obo:BFO_0000040 ;
+        obo:IAO_0000115             "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." ;
+        obo:IAO_0000412             <http://purl.obolibrary.org/obo/merged/CHEBI> ;
+        oboInOwl:hasExactSynonym    "molecular entity" ;
+        oboInOwl:hasOBONamespace    "chebi_ontology" ;
+        oboInOwl:hasRelatedSynonym  "molecular entities" , "entidades moleculares" , "entidad molecular" , "molekulare Entitaet" , "entite moleculaire" ;
+        oboInOwl:id                 "CHEBI:23367" ;
+        oboInOwl:inSubset           <http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR> .
+
+<http://project-genesis.io/ontology#GEN_000003>
+        rdf:type         owl:Class ;
+        rdfs:label       "cell culturing regime" ;
+        rdfs:subClassOf  obo:IAO_0000030 ;
+        obo:IAO_0000115  "Specification of the controllable physical and chemical conditions within a bioreactor" .
+
+obo:BFO_0000031  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "generically dependent continuant"@en , "generically dependent continuant" ;
+        rdfs:subClassOf   obo:BFO_0000002 ;
+        obo:BFO_0000179   "gdc" ;
+        obo:BFO_0000180   "GenericallyDependentContinuant" ;
+        obo:IAO_0000112   "The entries in your database are patterns instantiated as quality instances in your hard drive. The database itself is an aggregate of such patterns. When you create the database you create a particular instance of the generically dependent continuant type database. Each entry in the database is an instance of the generically dependent continuant type IAO: information content entity."@en , "the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule."@en , "the pdf file on your laptop, the pdf file that is a copy thereof on my laptop"@en ;
+        obo:IAO_0000115   "b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])"@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000602   "(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] " .
+
+obo:IAO_0000032  rdf:type  owl:Class ;
+        rdfs:label       "scalar measurement datum" , "scalar measurement datum"@en ;
+        rdfs:subClassOf  obo:IAO_0000109 ;
+        obo:IAO_0000112  "10 feet. 3 ml."@en ;
+        obo:IAO_0000114  obo:IAO_0000120 ;
+        obo:IAO_0000115  "A scalar measurement datum is a measurement datum that is composed of two parts, numerals and a unit label."@en ;
+        obo:IAO_0000116  "Would write this as: has_part some 'measurement unit label' and has_part some numeral and has_part exactly 2, except for the fact that this won't let us take advantage of OWL reasoning over the numbers. Instead use has measurment value property to represent the same. Use has measurement unit label (subproperty of has_part) so we can easily say that there is only one of them."@en , "2009-03-16: we decided to keep datum singular in scalar measurement datum, as in\nthis case we explicitly refer to the singular form"@en ;
+        obo:IAO_0000117  "PERSON: Melanie Courtot"@en , "PERSON: Alan Ruttenberg"@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/IAO> .
+
+oboInOwl:hasRelatedSynonym
+        rdf:type    owl:AnnotationProperty ;
+        rdfs:label  "has_related_synonym" .
+
+obo:OBI_0000659  rdf:type  owl:Class ;
+        rdfs:label       "specimen collection process" ;
+        rdfs:subClassOf  obo:OBI_0000011 ;
+        obo:IAO_0000111  "specimen collection process" ;
+        obo:IAO_0000112  "drawing blood from a patient for analysis, collecting a piece of a plant for depositing in a herbarium, buying meat from a butcher in order to measure its protein content in an investigation" ;
+        obo:IAO_0000114  obo:IAO_0000122 ;
+        obo:IAO_0000115  "A planned process with the objective of collecting a specimen." ;
+        obo:IAO_0000116  "Note: definition is in specimen creation objective which is defined as an objective to obtain and store a material entity for potential use as an input during an investigation." , "Philly2013: A specimen collection can have as part a material entity acquisition, such as ordering from a bank. The distinction is that specimen collection necessarily involves the creation of a specimen role. However ordering cell lines cells from ATCC for use in an investigation is NOT a specimen collection, because the cell lines already have a specimen role." , "label  changed to 'specimen collection process' on 10/27/2014, details see tracker:\nhttp://sourceforge.net/p/obi/obi-terms/716/" , "Philly2013: The specimen_role for the specimen is created during the specimen collection process." ;
+        obo:IAO_0000117  "Bjoern Peters" ;
+        obo:IAO_0000118  "specimen collection" ;
+        obo:IAO_0000232  "6/9/09: used at workshop" , "5/31/2012: This process is not necessarily an acquisition, as specimens may be collected from materials already in posession" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> .
+
+obo:IAO_0000111  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "editor preferred term~editor preferred label" , "editor preferred term" , "editor preferred term"@en , "editor preferred label"@en , "editor preferred label" ;
+        obo:IAO_0000111   "editor preferred term~editor preferred label" , "editor preferred label"@en , "editor preferred label" , "editor preferred term"@en , "editor preferred term" ;
+        obo:IAO_0000114   obo:IAO_0000122 ;
+        obo:IAO_0000115   "The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)"@en ;
+        obo:IAO_0000117   "PERSON:Daniel Schober"@en ;
+        obo:IAO_0000119   "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en .
+
+<http://project-genesis.io/ontology#GEN_000032>
+        rdf:type         owl:Class ;
+        rdfs:label       "pH datum" ;
+        rdfs:subClassOf  obo:IAO_0000140 .
+
+<http://project-genesis.io/ontology#GEN_000011>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:OBI_0500000 ;
+        rdfs:label          "has stated sampling timings" ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+oboInOwl:shorthand  rdf:type  owl:AnnotationProperty ;
+        rdfs:label  "shorthand" .
+
+obo:NCIT_P107  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "Display_Name" ;
+        obo:IAO_0000115           "A property representing an alternative Preferred Name for use in some NCI systems." ;
+        obo:NCIT_NHC0             "P107" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P107             "Display Name" ;
+        obo:NCIT_P108             "Display_Name" ;
+        oboInOwl:hasExactSynonym  "Display_Name" , "Display Name" .
+
+obo:IAO_0000232  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "curator note"@en ;
+        obo:IAO_0000111   "curator note"@en ;
+        obo:IAO_0000114   obo:IAO_0000122 ;
+        obo:IAO_0000115   "An administrative note of use for a curator but of no use for a user"@en ;
+        obo:IAO_0000117   "PERSON:Alan Ruttenberg"@en .
+
+obo:STATO_0000032  rdf:type  owl:AnnotationProperty ;
+        rdfs:label          "STATO alternative term"@en ;
+        rdfs:subPropertyOf  obo:IAO_0000118 ;
+        obo:IAO_0000115     "an alternative term used for STATO statistical ontology and ISA team"@en ;
+        obo:IAO_0000117     "Philippe Rocca-Serra"@en , "Orlaith Burke" , "Alejandra Gonzalez-Beltran"@en .
+
+obo:UO_0000270  rdf:type  owl:Class ;
+        rdfs:label       "volumetric flow rate unit" ;
+        rdfs:subClassOf  obo:IAO_0000003 ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/UO> .
+
+obo:NCIT_P207  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "UMLS_CUI" ;
+        obo:IAO_0000115           "A property representing the concept unique identifier (CUI) assigned by the National Library of Medicine (NLM). If a concept in any NCI-maintained knowledgebase exists in the NLM Unified Medical Language System (UMLS), NCI includes the NLM CUI among the information we provide about the concept." ;
+        obo:NCIT_NHC0             "P207" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P107             "UMLS CUI" ;
+        obo:NCIT_P108             "UMLS_CUI" ;
+        oboInOwl:hasExactSynonym  "UMLS_CUI" .
+
+obo:IAO_0000140  rdf:type  owl:Class ;
+        rdfs:label       "setting datum"@en , "setting datum" ;
+        rdfs:subClassOf  obo:IAO_0000027 ;
+        obo:IAO_0000114  obo:IAO_0000123 ;
+        obo:IAO_0000115  "A settings datum is a datum that denotes some configuration of an instrument."@en ;
+        obo:IAO_0000116  "Alan grouped these in placeholder for the moment. Name by analogy to measurement datum."@en , "2/3/2009 Feedback from OBI\n\nThis should be a \"setting specification\". There is a question of whether it is information about a realizable or not.\n\nPro other specification are about realizables.\nCons sometimes specifies a quality which is not a realizable."@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/IAO> .
+
+obo:IAO_0000119  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "definition_source" , "definition source" , "definition source"@en ;
+        obo:IAO_0000111   "definition source"@en ;
+        obo:IAO_0000114   obo:IAO_0000122 ;
+        obo:IAO_0000115   "Formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"@en , "formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"@en ;
+        obo:IAO_0000117   "PERSON:Daniel Schober"@en ;
+        obo:IAO_0000119   "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w"@en , "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w" , "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en .
+
+obo:NCIT_C85504  rdf:type         owl:Class ;
+        rdfs:label                "Growth Medium" ;
+        rdfs:subClassOf           obo:BFO_0000040 ;
+        obo:IAO_0000115           "A liquid or gel containing nutrients, salts, and other factors formulated to support the growth of microorganisms, cells, or plants." ;
+        obo:IAO_0000412           <http://purl.obolibrary.org/obo/merged/NCIT> ;
+        obo:NCIT_NHC0             "C85504" ;
+        obo:NCIT_P106             "Indicator, Reagent, or Diagnostic Aid" ;
+        obo:NCIT_P108             "Growth Medium" ;
+        obo:NCIT_P207             "C0010454" ;
+        oboInOwl:hasExactSynonym  "Media" , "Medium" , "Culture Medium" , "Growth Medium" .
+
+owl:topObjectProperty
+        rdf:type            rdf:Property ;
+        rdfs:label          "owl:topObjectProperty" ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+obo:OBI_0000070  rdf:type  owl:Class ;
+        rdfs:label       "assay" , "assay"@en ;
+        rdfs:subClassOf  obo:OBI_0000011 ;
+        obo:IAO_0000111  "assay"@en ;
+        obo:IAO_0000112  "Assay the wavelength of light emitted by excited Neon atoms. Count of geese flying over a house." ;
+        obo:IAO_0000114  obo:IAO_0000122 ;
+        obo:IAO_0000115  "A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies."@en ;
+        obo:IAO_0000116  "12/3/12: BP: the reference to the 'physical examination' is included to point out that a prediction is not an assay, as that does not require physical examiniation. " ;
+        obo:IAO_0000117  "PlanAndPlannedProcess Branch"@en ;
+        obo:IAO_0000118  "scientific observation"@en , "measuring"@en ;
+        obo:IAO_0000119  "OBI branch derived"@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> ;
+        obo:OBI_0001847  "study assay" ;
+        obo:OBI_9991118  "any method" .
+
+<http://project-genesis.io/ontology#GEN_000019>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:OBI_0500000 ;
+        rdfs:label          "is study of" ;
+        rdfs:range          obo:FOODON_03411345 ;
+        rdfs:subPropertyOf  obo:IAO_0000136 .
+
+obo:OBI_0002135  rdf:type   owl:DatatypeProperty , rdf:Property ;
+        rdfs:domain         obo:OBI_0001933 ;
+        rdfs:label          "has specified value"@en , "has specified value" ;
+        rdfs:subPropertyOf  owl:topDataProperty ;
+        obo:IAO_0000111     "has specified value"@en ;
+        obo:IAO_0000114     obo:IAO_0000123 ;
+        obo:IAO_0000115     "A relation between a value specification and a literal." ;
+        obo:IAO_0000116     "This is not an RDF/OWL object property. It is intended to link a value found in e.g. a database column of 'M' (the literal) to an instance of a value specification class, which can then be linked to indicate that this is about the biological gender of a human subject." ;
+        obo:IAO_0000119     "OBI" ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/OBI> .
+
+obo:IAO_0000027  rdf:type  owl:Class ;
+        rdfs:label       "data item"@en , "data item" ;
+        rdfs:subClassOf  obo:IAO_0000030 ;
+        obo:IAO_0000111  "data item"@en ;
+        obo:IAO_0000112  "Data items include counts of things, analyte concentrations, and statistical summaries."@en ;
+        obo:IAO_0000114  obo:IAO_0000125 ;
+        obo:IAO_0000115  "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
+        obo:IAO_0000116  "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym."@en , "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en , "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en , "JAR: datum     -- well, this will be very tricky to define, but maybe some \ninformation-like stuff that might be put into a computer and that is \nmeant, by someone, to denote and/or to be interpreted by some \nprocess... I would include lists, tables, sentences... I think I might \ndefer to Barry, or to Brian Cantwell Smith\n\nJAR: A data item is an approximately justified approximately true approximate belief"@en , "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/" ;
+        obo:IAO_0000117  "PERSON: Jonathan Rees"@en , "PERSON: Chris Stoeckert"@en , "PERSON: Alan Ruttenberg"@en ;
+        obo:IAO_0000118  "data"@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/IAO> .
+
+oboInOwl:hasExactSynonym
+        rdf:type                  owl:AnnotationProperty ;
+        rdfs:label                "has_exact_synonym" , "has exact synonym" ;
+        obo:IAO_0000115           "A property representing a fully qualified synonym, contains the string, term type, source, and an optional source code if appropriate. Each subfield is deliniated to facilitate interpretation by software." ;
+        oboInOwl:hasExactSynonym  "Synonym with Source Data" , "FULL_SYN" .
+
+obo:OBI_9991118  rdf:type   owl:AnnotationProperty ;
+        rdfs:label          "IEDB alternative term" ;
+        rdfs:subPropertyOf  obo:IAO_0000118 ;
+        obo:IAO_0000111     "IEDB alternative term" ;
+        obo:IAO_0000114     obo:IAO_0000122 ;
+        obo:IAO_0000115     "An alternative term used by the IEDB." ;
+        obo:IAO_0000117     "PERSON:Randi Vita, Jason Greenbaum, Bjoern Peters" ;
+        obo:IAO_0000119     "IEDB" .
+
+obo:BCGO_0000183  rdf:type  owl:ObjectProperty , rdf:Property ;
+        rdfs:domain         obo:CHEBI_23367 ;
+        rdfs:label          "has concentration"@en , "has concentration" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000001> ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/BCGO> ;
+        efo:definition      "relates a molecular entity to its concentration measurement datum that is the measurement of its concentration quality" .
+
+<http://project-genesis.io/ontology#GEN_000027>
+        rdf:type         owl:Class ;
+        rdfs:label       "gene count datum" ;
+        rdfs:subClassOf  obo:STATO_0000047 .
+
+<http://project-genesis.io/ontology#GEN_000006>
+        rdf:type         owl:Class ;
+        rdfs:label       "genome structure" ;
+        rdfs:subClassOf  obo:BFO_0000019 .
+
+obo:OBI_0001847  rdf:type   owl:AnnotationProperty ;
+        rdfs:label          "ISA alternative term"@en ;
+        rdfs:subPropertyOf  obo:IAO_0000118 ;
+        obo:IAO_0000111     "ISA alternative term"@en ;
+        obo:IAO_0000114     obo:IAO_0000122 ;
+        obo:IAO_0000115     "An alternative term used by the ISA tools project (http://isa-tools.org)." ;
+        obo:IAO_0000116     "Requested by Alejandra Gonzalez-Beltran\nhttps://sourceforge.net/tracker/?func=detail&aid=3603413&group_id=177891&atid=886178" ;
+        obo:IAO_0000117     "Person: Alejandra Gonzalez-Beltran" , "Person: Philippe Rocca-Serra" ;
+        obo:IAO_0000119     "ISA tools project (http://isa-tools.org)" .
+
+oboInOwl:hasDbXref  rdf:type  owl:AnnotationProperty ;
+        rdfs:label  "database_cross_reference" .
+
+obo:RO_0002421  rdf:type    owl:AnnotationProperty ;
+        rdfs:label          "logical macro assertion on a property"@en ;
+        rdfs:subPropertyOf  obo:RO_0002416 ;
+        obo:IAO_0000115     "A logical macro assertion whose domain is an IRI for a property" .
+
+rdfs:seeAlso  rdf:type  owl:AnnotationProperty .
+
+obo:OBI_0000299  rdf:type   owl:ObjectProperty , rdf:Property ;
+        rdfs:domain         obo:OBI_0000011 ;
+        rdfs:label          "has_specified_output"@en , "has_specified_output" ;
+        rdfs:subPropertyOf  obo:RO_0000057 ;
+        obo:IAO_0000111     "has_specified_output" , "has_specified_output"@en ;
+        obo:IAO_0000114     obo:IAO_0000122 ;
+        obo:IAO_0000115     "The inverse property of is_specified_output_of"@en ;
+        obo:IAO_0000117     "PERSON: Melanie Courtot" , "PERSON: Bjoern Peters" , "PERSON: Alan Ruttenberg"@en , "PERSON: Larry Hunter" ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/OBI> , obo:obi.owl .
+
+obo:IAO_0000114  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "has curation status" , "has curation status"@en ;
+        obo:IAO_0000111   "has curation status"@en ;
+        obo:IAO_0000117   "PERSON:Melanie Courtot"@en , "PERSON:Bill Bug"@en , "PERSON:Alan Ruttenberg"@en ;
+        obo:IAO_0000119   "OBI_0000281"@en .
+
+<http://project-genesis.io/ontology#GEN_000035>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:OBI_0500000 ;
+        rdfs:label          "has stated regime durations" ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+<http://project-genesis.io/ontology#GEN_000014>
+        rdf:type            rdf:Property ;
+        rdfs:domain         <http://project-genesis.io/ontology#GEN_000003> ;
+        rdfs:label          "has stated growth medium" ;
+        rdfs:range          obo:NCIT_C85504 ;
+        rdfs:subPropertyOf  obo:IAO_0000142 .
+
+rdf:List  rdf:type       owl:Class ;
+        rdfs:label       "List" ;
+        rdfs:subClassOf  rdfs:Class .
+
+obo:BFO_0000050  rdf:type   owl:TransitiveProperty , owl:ObjectProperty , rdf:Property ;
+        rdfs:label          "part of"@en , "part of" ;
+        rdfs:seeAlso        "http://www.obofoundry.org/ro/#OBO_REL:part_of" ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        obo:IAO_0000111     "is part of"@en ;
+        obo:IAO_0000112     "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en , "this day is part of this year (occurrent parthood)"@en , "my brain is part of my body (continuant parthood, two material entities)"@en ;
+        obo:IAO_0000115     "a core relation that holds between a part and its whole"@en ;
+        obo:IAO_0000116     "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en , "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."@en , "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en ;
+        obo:IAO_0000118     "part_of"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/OBI> ;
+        obo:RO_0001900      obo:RO_0001901 ;
+        owl:inverseOf       obo:BFO_0000051 .
+
+obo:OBI_0002138  rdf:type  owl:Class ;
+        rdfs:label       "temperature value specification"@en , "temperature value specification" ;
+        rdfs:subClassOf  obo:OBI_0001933 ;
+        obo:IAO_0000111  "temperature value specification" ;
+        obo:IAO_0000114  obo:IAO_0000122 ;
+        obo:IAO_0000115  "A value specification that specifies the temperature of some thing." ;
+        obo:IAO_0000117  "Chris Stoeckert" ;
+        obo:IAO_0000119  "OBI" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> .
+
+obo:RO_0000080  rdf:type    owl:ObjectProperty , rdf:Property ;
+        rdfs:label          "quality of"@en , "quality of" ;
+        rdfs:subPropertyOf  obo:RO_0000052 ;
+        obo:IAO_0000112     "this red color is a quality of this apple"@en ;
+        obo:IAO_0000115     "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
+        obo:IAO_0000116     "A quality inheres in its bearer at all times for which the quality exists."@en ;
+        obo:IAO_0000118     "is quality of"@en , "quality_of"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/OBI> .
+
+<http://project-genesis.io/ontology#GEN_000001>
+        rdf:type         owl:Class ;
+        rdfs:label       "concentration of datum" ;
+        rdfs:subClassOf  obo:IAO_0000027 .
+
+obo:IAO_0000030  rdf:type  owl:Class ;
+        rdfs:label       "information content entity"@en , "information content entity" ;
+        rdfs:subClassOf  obo:BFO_0000031 ;
+        obo:IAO_0000111  "information content entity"@en ;
+        obo:IAO_0000112  "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
+        obo:IAO_0000114  obo:IAO_0000122 ;
+        obo:IAO_0000115  "A generically dependent continuant that is about some thing."@en ;
+        obo:IAO_0000116  "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en , "information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).\n\nPrevious. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."@en ;
+        obo:IAO_0000117  "PERSON: Chris Stoeckert"@en ;
+        obo:IAO_0000119  "OBI_0000142"@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/IAO> .
+
+oboInOwl:inSubset  rdf:type       owl:AnnotationProperty ;
+        rdfs:label                "in_subset" , "in subset" ;
+        obo:IAO_0000115           "An association that connects the concept defining a particular terminology subset with concepts that belong to this subset." ;
+        oboInOwl:hasExactSynonym  "Concept_In_Subset" .
+
+dc:creator  rdf:type  owl:AnnotationProperty .
+
+obo:IAO_0000009  rdf:type  owl:Class ;
+        rdfs:label       "datum label"@en , "datum label" ;
+        rdfs:subClassOf  obo:IAO_0000030 ;
+        obo:IAO_0000111  "datum label"@en ;
+        obo:IAO_0000114  obo:IAO_0000123 ;
+        obo:IAO_0000115  "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label"@en ;
+        obo:IAO_0000116  "http://www.golovchenko.org/cgi-bin/wnsearch?q=label#4n"@en ;
+        obo:IAO_0000117  "GROUP: IAO"@en ;
+        obo:IAO_0000232  "9/22/11 BP: changed the rdfs:label for this class from 'label' to 'datum label' to convey that this class is not intended to cover all kinds of labels (stickers, radiolabels, etc.), and not even all kind of textual labels, but rather the kind of labels occuring in a datum. \n" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/IAO> .
+
+obo:RO_0002416  rdf:type  owl:AnnotationProperty ;
+        rdfs:label       "logical macro assertion"@en ;
+        rdfs:seeAlso     "http://purl.obolibrary.org/obo/ro/docs/shortcut-relations/"^^xsd:anyURI ;
+        obo:IAO_0000115  "An assertion that involves at least one OWL object that is intended to be expanded into one or more logical axioms. The logical expansion can yield axioms expressed using any formal logical system, including, but not limited to OWL2-DL." .
+
+oboInOwl:hasAlternativeId
+        rdf:type    owl:AnnotationProperty ;
+        rdfs:label  "has_alternative_id" .
+
+obo:IAO_0000109  rdf:type  owl:Class ;
+        rdfs:label       "measurement datum"@en , "measurement datum" ;
+        rdfs:subClassOf  obo:IAO_0000027 ;
+        obo:IAO_0000111  "measurement datum"@en ;
+        obo:IAO_0000112  "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}."@en ;
+        obo:IAO_0000114  obo:IAO_0000125 ;
+        obo:IAO_0000115  "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device."@en ;
+        obo:IAO_0000116  "2/2/2009 is_specified_output of some assay?"@en ;
+        obo:IAO_0000117  "person:Chris Stoeckert"@en ;
+        obo:IAO_0000119  "OBI_0000305"@en , "group:OBI"@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/IAO> .
+
+obo:UO_0000005  rdf:type  owl:Class ;
+        rdfs:label       "temperature unit" ;
+        rdfs:subClassOf  obo:IAO_0000003 ;
+        obo:IAO_0000111  "temperature unit" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> , obo:uo.owl .
+
+<http://project-genesis.io/ontology#GEN_000009>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:ENVO_01001815 ;
+        rdfs:label          "has material sampling" ;
+        rdfs:range          obo:OBI_0000744 ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+obo:BFO_0000179  rdf:type   owl:AnnotationProperty ;
+        rdfs:label          "BFO OWL specification label"@en ;
+        rdfs:subPropertyOf  rdfs:label ;
+        obo:IAO_0000115     "Relates an entity in the ontology to the name of the variable that is used to represent it in the code that generates the BFO OWL file from the lispy specification."@en ;
+        obo:IAO_0000232     "Really of interest to developers only"@en .
+
+obo:IAO_0000117  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "term editor"@en ;
+        obo:IAO_0000111   "term editor"@en ;
+        obo:IAO_0000114   obo:IAO_0000122 ;
+        obo:IAO_0000115   "Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people"@en ;
+        obo:IAO_0000116   "20110707, MC: label update to term editor and definition modified accordingly. See http://code.google.com/p/information-artifact-ontology/issues/detail?id=115."@en , "20110707, MC: label update to term editor and definition modified accordingly. See https://github.com/information-artifact-ontology/IAO/issues/115."@en ;
+        obo:IAO_0000117   "PERSON:Daniel Schober"@en ;
+        obo:IAO_0000119   "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en .
+
+<http://project-genesis.io/ontology#GEN_000038>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:ENVO_01001815 ;
+        rdfs:label          "has specified yeast" ;
+        rdfs:range          obo:FOODON_03411345 ;
+        rdfs:subPropertyOf  obo:OBI_0000293 .
+
+<http://project-genesis.io/ontology#GEN_000017>
+        rdf:type            rdf:Property ;
+        rdfs:domain         <http://project-genesis.io/ontology#GEN_000008> ;
+        rdfs:label          "has stated concentration" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000001> ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+obo:IAO_0000601  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "has associated axiom(nl)"@en .
+
+obo:OBI_0000744  rdf:type  owl:Class ;
+        rdfs:label       "material sampling process" ;
+        rdfs:subClassOf  obo:OBI_0000011 ;
+        obo:IAO_0000111  "material sampling process" ;
+        obo:IAO_0000114  obo:IAO_0000123 ;
+        obo:IAO_0000115  "A specimen gathering process with the objective to obtain a specimen that is representative of the input material entity" ;
+        obo:IAO_0000118  "sampling" , "sample collection" ;
+        obo:IAO_0000233  "https://github.com/obi-ontology/obi/issues/1002" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> .
+
+obo:BFO_0000003  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "occurrent"@en , "occurrent" ;
+        rdfs:subClassOf   obo:BFO_0000001 ;
+        obo:BFO_0000179   "occurrent" ;
+        obo:BFO_0000180   "Occurrent" ;
+        obo:IAO_0000116   "Simons uses different terminology for relations of occurrents to regions: Denote the spatio-temporal location of a given occurrent e by 'spn[e]' and call this region its span. We may say an occurrent is at its span, in any larger region, and covers any smaller region. Now suppose we have fixed a frame of reference so that we can speak not merely of spatio-temporal but also of spatial regions (places) and temporal regions (times). The spread of an occurrent, (relative to a frame of reference) is the space it exactly occupies, and its spell is likewise the time it exactly occupies. We write 'spr[e]' and `spl[e]' respectively for the spread and spell of e, omitting mention of the frame." , "BFO 2 Reference: s-dependence obtains between every process and its participants in the sense that, as a matter of necessity, this process could not have existed unless these or those participants existed also. A process may have a succession of participants at different phases of its unfolding. Thus there may be different players on the field at different times during the course of a football game; but the process which is the entire game s-depends_on all of these players nonetheless. Some temporal parts of this process will s-depend_on on only some of the players."@en , "Occurrent doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. An example would be the sum of a process and the process boundary of another process."@en , "BFO 2 Reference: every occurrent that is not a temporal or spatiotemporal region is s-dependent on some independent continuant that is not a spatial region"@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000600   "An occurrent is an entity that unfolds itself in time or it is the instantaneous boundary of such an entity (for example a beginning or an ending) or it is a temporal or spatiotemporal region which such an entity occupies_temporal_region or occupies_spatiotemporal_region. (axiom label in BFO2 Reference: [077-002])"@en ;
+        obo:IAO_0000601   "Every occurrent occupies_spatiotemporal_region some spatiotemporal region. (axiom label in BFO2 Reference: [108-001])"@en , "b is an occurrent entity iff b is an entity that has temporal parts. (axiom label in BFO2 Reference: [079-001])"@en ;
+        obo:IAO_0000602   "(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] " , "(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] " .
+
+dc:source  rdf:type  owl:AnnotationProperty .
+
+obo:NCIT_P98  rdf:type            owl:AnnotationProperty ;
+        rdfs:label                "DesignNote" ;
+        obo:IAO_0000115           "A property representing notations made by NCI vocabulary curators. They are intended to provide supplemental, unstructured information to the user or additional insight about the concept." ;
+        obo:NCIT_NHC0             "P98" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P107             "DesignNote" ;
+        obo:NCIT_P108             "DesignNote" ;
+        oboInOwl:hasExactSynonym  "DesignNote" .
+
+obo:OBI_0001937  rdf:type   rdf:Property , owl:DatatypeProperty ;
+        rdfs:domain         obo:OBI_0001933 ;
+        rdfs:label          "has specified numeric value" ;
+        rdfs:subPropertyOf  obo:OBI_0002135 ;
+        obo:IAO_0000111     "has specified numeric value" ;
+        obo:IAO_0000114     obo:IAO_0000120 ;
+        obo:IAO_0000115     "A relation between a value specification and a number that quantifies it." ;
+        obo:IAO_0000116     "A range of 'real' might be better than 'float'. For now we follow 'has measurement value' until we can consider technical issues with SPARQL queries and reasoning." ;
+        obo:IAO_0000117     "PERSON: James A. Overton" ;
+        obo:IAO_0000119     "OBI" ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/OBI> .
+
+<http://project-genesis.io/ontology#GEN_000004>
+        rdf:type         owl:Class ;
+        rdfs:label       "concentration value specification" ;
+        rdfs:subClassOf  obo:OBI_0001933 .
+
+obo:IAO_0000417  rdf:type   owl:ObjectProperty , rdf:Property ;
+        rdfs:domain         obo:BFO_0000019 ;
+        rdfs:label          "is quality measured as"@en , "is quality measured as" ;
+        rdfs:range          obo:IAO_0000109 ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        obo:IAO_0000114     obo:IAO_0000120 ;
+        obo:IAO_0000115     "inverse of the relation of is quality measurement of"@en ;
+        obo:IAO_0000116     "2009/10/19 Alan Ruttenberg. Named 'junk' relation useful in restrictions, but not a real instance relationship"@en ;
+        obo:IAO_0000117     "Person:Alan Ruttenberg"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/IAO> ;
+        owl:inverseOf       obo:IAO_0000221 .
+
+obo:NCIT_C43377  rdf:type         owl:Class ;
+        rdfs:label                "Microplate" ;
+        rdfs:subClassOf           obo:BFO_0000040 ;
+        obo:IAO_0000115           "A flat dish with multiple individual wells that are arrayed in a standardized number, size, and arrangement." ;
+        obo:IAO_0000412           <http://purl.obolibrary.org/obo/merged/NCIT> ;
+        obo:NCIT_NHC0             "C43377" ;
+        obo:NCIT_P106             "Research Device" ;
+        obo:NCIT_P108             "Microplate" ;
+        obo:NCIT_P207             "C0184066" ;
+        obo:NCIT_P366             "Microplate" ;
+        oboInOwl:hasExactSynonym  "Microplate" , "Microtiter Plate" .
+
+obo:PDRO_0010033  rdf:type  owl:Class ;
+        rdfs:label       "spécification de valeur de rythme"@fr , "volumetric flow rate value specification"@en , "volumetric flow rate value specification" ;
+        rdfs:subClassOf  obo:OBI_0001933 ;
+        obo:IAO_0000112  "'50mL per hour'" ;
+        obo:IAO_0000114  obo:IAO_0000423 ;
+        obo:IAO_0000115  "Une spécification de valeur scalaire dont l'unité est une unité de rythme."@fr , "A scalar value specification whose unit label is a volumetric rate unit."@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/PDRO> .
+
+obo:IAO_0000112  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "example of usage"@en ;
+        obo:IAO_0000111   "example"@en , "example of usage"@en ;
+        obo:IAO_0000114   obo:IAO_0000122 ;
+        obo:IAO_0000115   "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold."@en ;
+        obo:IAO_0000117   "PERSON:Daniel Schober"@en ;
+        obo:IAO_0000119   "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en .
+
+<http://project-genesis.io/ontology#GEN_000033>
+        rdf:type         owl:Class ;
+        rdfs:label       "cell culturing duration datum" ;
+        rdfs:subClassOf  <http://project-genesis.io/ontology#GEN_000034> .
+
+<http://project-genesis.io/ontology#GEN_000012>
+        rdf:type            rdf:Property ;
+        rdfs:domain         <http://project-genesis.io/ontology#GEN_000003> ;
+        rdfs:label          "has stated temperature" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000031> ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+oboInOwl:creation_date
+        rdf:type  owl:AnnotationProperty .
+
+obo:BFO_0000040  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "material entity" , "material entity"@en ;
+        rdfs:subClassOf   obo:BFO_0000004 ;
+        obo:BFO_0000179   "material" ;
+        obo:BFO_0000180   "MaterialEntity" ;
+        obo:IAO_0000112   "a photon"@en , "a forest fire"@en , "an energy wave"@en , "a hurricane"@en , "an epidemic"@en , "a flame"@en , "the undetached arm of a human being"@en , "a puff of smoke"@en , "an aggregate of human beings."@en , "a human being"@en , "a tornado"@en , "a sea wave"@en ;
+        obo:IAO_0000116   "BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here."@en , "BFO 2 Reference: Object, Fiat Object Part and Object Aggregate are not intended to be exhaustive of Material Entity. Users are invited to propose new subcategories of Material Entity."@en , "BFO 2 Reference: Material entities (continuants) can preserve their identity even while gaining and losing material parts. Continuants are contrasted with occurrents, which unfold themselves in successive temporal parts or phases [60"@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000600   "A material entity is an independent continuant that has some portion of matter as proper or improper continuant part. (axiom label in BFO2 Reference: [019-002])"@en ;
+        obo:IAO_0000601   "every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])"@en , "Every entity which has a material entity as continuant part is a material entity. (axiom label in BFO2 Reference: [020-002])"@en ;
+        obo:IAO_0000602   "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] " , "(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] " , "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] " .
+
+obo:RO_0001000  rdf:type    rdf:Property , owl:ObjectProperty ;
+        rdfs:domain         obo:BFO_0000004 ;
+        rdfs:label          "derives from"@en , "derives from" ;
+        rdfs:range          obo:BFO_0000004 ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        obo:IAO_0000112     "this nucleus derives from this parent nucleus (nuclear division)"@en , "this cell derives from this parent cell (cell division)"@en ;
+        obo:IAO_0000114     obo:IAO_0000125 ;
+        obo:IAO_0000115     "a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity"@en ;
+        obo:IAO_0000116     "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops from'."@en ;
+        obo:IAO_0000118     "derives_from"@en ;
+        obo:IAO_0000232     "This relation is taken from the RO2005 version of RO. It may be obsoleted and replaced by relations with different definitions. See also the 'develops from' family of relations." ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/RO> ;
+        oboInOwl:inSubset   <http://purl.oboInOwllibrary.org/oboInOwl/ro/subsets#ro-eco> .
+
+obo:NCIT_P108  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "Preferred_Name" ;
+        obo:IAO_0000115           "A property representing the word or phrase that NCI uses by preference to refer to the concept." ;
+        obo:NCIT_NHC0             "P108" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P107             "Preferred Name" ;
+        obo:NCIT_P108             "Preferred_Name" ;
+        oboInOwl:hasExactSynonym  "Preferred Name" , "Preferred_Name" , "Preferred Term" .
+
+obo:IAO_0000233  rdf:type  owl:AnnotationProperty ;
+        rdfs:comment     "The 'tracker item' can associate a tracker with a specific ontology term."@en ;
+        rdfs:label       "term tracker item"@en ;
+        obo:IAO_0000111  "term tracker item"@en ;
+        obo:IAO_0000112  "the URI for an OBI Terms ticket at sourceforge, such as https://sourceforge.net/p/obi/obi-terms/772/"@en ;
+        obo:IAO_0000114  obo:IAO_0000125 ;
+        obo:IAO_0000115  "An IRI or similar locator for a request or discussion of an ontology term."@en ;
+        obo:IAO_0000117  "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+        obo:IAO_0000119  "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en .
+
+obo:BFO_0000019  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "quality"@en , "quality" ;
+        rdfs:subClassOf   obo:BFO_0000020 ;
+        obo:BFO_0000179   "quality" ;
+        obo:BFO_0000180   "Quality" ;
+        obo:IAO_0000112   "the shape of your nostril"@en , "the mass of this piece of gold."@en , "the length of the circumference of your waist"@en , "the shape of your nose"@en , "the ambient temperature of this portion of air"@en , "the color of a tomato"@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000600   "a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])"@en ;
+        obo:IAO_0000601   "If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])"@en ;
+        obo:IAO_0000602   "(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] " , "(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] " .
+
+rdf:type  rdf:type  owl:AnnotationProperty .
+
+obo:NCIT_P208  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "NCI_META_CUI" ;
+        obo:IAO_0000115           "A property representing the concept unique identifier (CUI) for those concepts that appear in NCI Metathesaurus but not in the National Library of Medicine Unified Medical Language System (NLM UMLS)." ;
+        obo:NCIT_NHC0             "P208" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P107             "NCI Metathesaurus CUI" ;
+        obo:NCIT_P108             "NCI_META_CUI" ;
+        oboInOwl:hasExactSynonym  "NCI_META_CUI" .
+
+<http://project-genesis.io/ontology#GEN_000020>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:ENVO_01001815 ;
+        rdfs:label          "has duration" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000033> ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        owl:inverseOf       obo:IAO_0000413 .
+
+obo:OBI_0000747  rdf:type  owl:Class ;
+        rdfs:label       "material sample" ;
+        rdfs:subClassOf  obo:BFO_0000040 ;
+        obo:IAO_0000111  "material sample" ;
+        obo:IAO_0000112  "blood drawn from patient to measure his systemic glucose level. A population of humans with HIV enrolled in a study taken to represent patients with HIV in general." ;
+        obo:IAO_0000114  obo:IAO_0000123 ;
+        obo:IAO_0000115  "A material entity that has the material sample role" ;
+        obo:IAO_0000117  "OBI: workshop" ;
+        obo:IAO_0000118  "sample population" ;
+        obo:IAO_0000233  <https://github.com/obi-ontology/obi/issues/1013> ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> ;
+        obo:OBI_0001847  "sample" .
+
+obo:RO_0000057  rdf:type    rdf:Property , owl:ObjectProperty ;
+        rdfs:domain         obo:BFO_0000003 ;
+        rdfs:label          "has participant"@en , "has participant" ;
+        rdfs:range          obo:BFO_0000002 ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        obo:IAO_0000111     "has participant"@en ;
+        obo:IAO_0000112     "this process has participant this input material (or this output material)"@en , "this investigation has participant this investigator"@en , "this blood coagulation has participant this blood clot"@en ;
+        obo:IAO_0000115     "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
+        obo:IAO_0000116     "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
+        obo:IAO_0000118     "has_participant"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/RO> ;
+        dc:source           "http://www.obofoundry.org/ro/#OBO_REL:has_participant" .
+
+obo:IAO_0000412  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "imported from"@en ;
+        obo:IAO_0000111   "imported from"@en ;
+        obo:IAO_0000114   obo:IAO_0000125 ;
+        obo:IAO_0000115   "For external terms/classes, the ontology from which the term was imported"@en ;
+        obo:IAO_0000117   "PERSON:Melanie Courtot"@en , "PERSON:Alan Ruttenberg"@en ;
+        obo:IAO_0000119   "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en .
+
+obo:OBI_0500000  rdf:type  owl:Class ;
+        rdfs:label       "study design"@en , "study design" ;
+        rdfs:subClassOf  obo:IAO_0000030 ;
+        obo:IAO_0000111  "study design"@en ;
+        obo:IAO_0000112  "a matched pairs study design describes criteria by which subjects are identified as pairs which then undergo the same protocols, and the data generated is analyzed by comparing the differences between the paired subjects, which constitute the results of the executed study design."@en ;
+        obo:IAO_0000114  obo:IAO_0000122 ;
+        obo:IAO_0000115  "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution." ;
+        obo:IAO_0000116  "Editor note: there is at least an implicit restriction on the kind of data transformations that can be done based on the measured data available." ;
+        obo:IAO_0000117  "PERSON: Chris Stoeckert" ;
+        obo:IAO_0000118  "experimental design"@en ;
+        obo:IAO_0000232  "rediscussed at length (MC/JF/BP). 12/9/08). The definition was clarified to differentiate it from protocol."@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> , obo:obi.owl .
+
+<http://project-genesis.io/ontology#GEN_000028>
+        rdf:type         owl:Class ;
+        rdfs:label       "gene count data set" ;
+        rdfs:subClassOf  obo:IAO_0000100 .
+
+obo:UO_0000003  rdf:type  owl:Class ;
+        rdfs:label       "time unit" ;
+        rdfs:subClassOf  obo:IAO_0000003 ;
+        obo:IAO_0000111  "time unit" ;
+        obo:IAO_0000115  "A unit which is a standard measure of the dimension in which events occur in sequence." ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> , obo:uo.owl .
+
+<http://project-genesis.io/ontology#GEN_000007>
+        rdf:type         owl:Class ;
+        rdfs:label       "sampling time value specification" ;
+        rdfs:subClassOf  obo:OBI_0001933 .
+
+owl:Thing  rdf:type      owl:Class ;
+        rdfs:label       "Thing" ;
+        rdfs:subClassOf  owl:Thing .
+
+obo:RO_0002422  rdf:type    owl:AnnotationProperty ;
+        rdfs:label          "logical macro assertion on an object property"@en ;
+        rdfs:subPropertyOf  obo:RO_0002421 ;
+        obo:IAO_0000115     "Used to annotate object properties to describe a logical meta-property or characteristic of the object property." .
+
+obo:UO_0000095  rdf:type  owl:Class ;
+        rdfs:label       "volume unit" ;
+        rdfs:subClassOf  obo:IAO_0000003 ;
+        obo:IAO_0000111  "volume unit" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> , obo:uo.owl .
+
+obo:NCIT_P366  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "Legacy Concept Name" ;
+        protege:readOnly          "true" ;
+        obo:IAO_0000115           "A property representing a retired unique concept identifier created and stored as Concept Name by legacy EVS software. Use of these values was long discouraged, but continued as late as 2009 when creation of new values ceased and Concept Name was retired. Legacy values are intended solely to help resolve and update earlier coding." ;
+        obo:NCIT_NHC0             "P366" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P108             "Legacy Concept Name" ;
+        oboInOwl:hasExactSynonym  "Legacy_Concept_Name" , "Legacy Concept Name" .
+
+obo:IAO_0000136  rdf:type   rdf:Property , owl:ObjectProperty ;
+        rdfs:domain         obo:IAO_0000030 ;
+        rdfs:label          "is about"@en , "is about" ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        obo:IAO_0000112     "This document is about information artifacts and their representations"@en ;
+        obo:IAO_0000114     obo:IAO_0000125 ;
+        obo:IAO_0000115     "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+        obo:IAO_0000116     "7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of \"mentions\" relation. Weaken the is_about relationship to be primitive. \n\nWe will try to build it back up by elaborating the various subproperties that are more precisely defined.\n\nSome currently missing phenomena that should be considered \"about\" are predications - \"The only person who knows the answer is sitting beside me\" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."@en ;
+        obo:IAO_0000117     "person:Alan Ruttenberg"@en ;
+        obo:IAO_0000119     "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/IAO> .
+
+obo:UO_0000032  rdf:type  owl:NamedIndividual , obo:UO_0000003 ;
+        rdfs:label       "hour" ;
+        obo:IAO_0000111  "hour" ;
+        obo:IAO_0000115  "A time unit which is equal to 3600 seconds or 60 minutes." ;
+        obo:IAO_0000118  "h" , "hr" ;
+        obo:IAO_0000412  obo:uo.owl .
+
+obo:IAO_0000115  rdf:type         owl:AnnotationProperty ;
+        rdfs:isDefinedBy          obo:iao.owl ;
+        rdfs:label                "textual definition" , "definition"@en , "definition" ;
+        obo:IAO_0000111           "definition"@en , "definition" , "textual definition" ;
+        obo:IAO_0000114           obo:IAO_0000122 ;
+        obo:IAO_0000115           "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en , "A property representing the English language definitions of what NCI means by the concept. They may also include information about the definition's source and attribution in a form that can easily be interpreted by software." , "English language definitions of what NCI means by the concept. These are limited to 1024 characters. They may also include information about the definition's source and attribution in a form that can easily be interpreted by software." , "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
+        obo:IAO_0000116           "2012-04-05: \nBarry Smith\n\nThe official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.\n\nCan you fix to something like:\n\nA statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.\n\nAlan Ruttenberg\n\nYour proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. \n\nOn the specifics of the proposed definition:\n\nWe don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. \n\nPersonally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. \n\nWe also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  "@en ;
+        obo:IAO_0000117           "PERSON:Daniel Schober"@en ;
+        obo:IAO_0000119           "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+        oboInOwl:hasExactSynonym  "DEFINITION" .
+
+<http://project-genesis.io/ontology#GEN_000036>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:ENVO_01001815 ;
+        rdfs:label          "has specified microplate well" ;
+        rdfs:range          obo:NCIT_C128793 ;
+        rdfs:subPropertyOf  obo:OBI_0000293 .
+
+obo:RO_0002351  rdf:type    owl:IrreflexiveProperty , owl:ObjectProperty , rdf:Property ;
+        rdfs:label          "has member"@en , "has member" ;
+        rdfs:subPropertyOf  obo:BFO_0000051 ;
+        obo:IAO_0000115     "has member is a mereological relation between a collection and an item." ;
+        obo:IAO_0000119     "SIO" ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/OBI> ;
+        obo:RO_0001900      obo:RO_0001901 .
+
+<http://project-genesis.io/ontology#GEN_000015>
+        rdf:type            rdf:Property ;
+        rdfs:domain         <http://project-genesis.io/ontology#GEN_000003> ;
+        rdfs:label          "has stated composition" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000008> ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+dc:date  rdf:type  owl:AnnotationProperty .
+
+obo:PATO_0000025  rdf:type         owl:Class ;
+        rdfs:comment               "For example calcium composition (which may inhere in bone), haemoglobin composition (which may inhere in blood)." ;
+        rdfs:label                 "composition" ;
+        rdfs:subClassOf            obo:BFO_0000019 ;
+        obo:IAO_0000115            "A single physical entity inhering in an bearer by virtue of the bearer's quantities or relative ratios of subparts." ;
+        obo:IAO_0000412            <http://purl.obolibrary.org/obo/merged/PATO> ;
+        oboInOwl:hasAlternativeId  "PATO:0002015" ;
+        oboInOwl:hasExactSynonym   "composed of" , "structure, composition" , "compositionality" , "content" ;
+        oboInOwl:hasOBONamespace   "quality" ;
+        oboInOwl:id                "PATO:0000025" ;
+        oboInOwl:inSubset          <http://purl.oboInOwllibrary.org/oboInOwl/pato#scalar_slim> , <http://purl.oboInOwllibrary.org/oboInOwl/pato#attribute_slim> .
+
+obo:RO_0000052  rdf:type    rdf:Property , owl:ObjectProperty ;
+        rdfs:label          "inheres in"@en , "inheres in" ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        obo:IAO_0000111     "inheres in"@en ;
+        obo:IAO_0000112     "this red color inheres in this apple"@en , "this fragility inheres in this vase"@en ;
+        obo:IAO_0000115     "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence"@en ;
+        obo:IAO_0000116     "A dependent inheres in its bearer at all times for which the dependent exists."@en ;
+        obo:IAO_0000118     "inheres_in"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/OBI> ;
+        obo:RO_0001900      obo:RO_0001901 ;
+        owl:inverseOf       obo:RO_0000053 .
+
+obo:BFO_0000001  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "entity"@en , "entity" ;
+        rdfs:subClassOf   owl:Thing ;
+        obo:BFO_0000179   "entity" ;
+        obo:BFO_0000180   "Entity" ;
+        obo:IAO_0000112   "Verdi’s Requiem"@en , "the Second World War"@en , "Julius Caesar"@en , "your body mass index"@en ;
+        obo:IAO_0000116   "Entity doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. For example Werner Ceusters 'portions of reality' include 4 sorts, entities (as BFO construes them), universals, configurations, and relations. It is an open question as to whether entities as construed in BFO will at some point also include these other portions of reality. See, for example, 'How to track absolutely everything' at http://www.referent-tracking.com/_RTU/papers/CeustersICbookRevised.pdf"@en , "BFO 2 Reference: In all areas of empirical inquiry we encounter general terms of two sorts. First are general terms which refer to universals or types:animaltuberculosissurgical procedurediseaseSecond, are general terms used to refer to groups of entities which instantiate a given universal but do not correspond to the extension of any subuniversal of that universal because there is nothing intrinsic to the entities in question by virtue of which they – and only they – are counted as belonging to the given group. Examples are: animal purchased by the Emperortuberculosis diagnosed on a Wednesdaysurgical procedure performed on a patient from Stockholmperson identified as candidate for clinical trial #2056-555person who is signatory of Form 656-PPVpainting by Leonardo da VinciSuch terms, which represent what are called ‘specializations’ in [81"@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000600   "An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])"@en .
+
+obo:PATO_0000146  rdf:type        owl:Class ;
+        rdfs:label                "temperature" ;
+        rdfs:subClassOf           obo:BFO_0000019 ;
+        obo:IAO_0000115           "A physical quality of the thermal energy of a system." ;
+        obo:IAO_0000412           <http://purl.obolibrary.org/obo/merged/PATO> ;
+        oboInOwl:hasOBONamespace  "quality" ;
+        oboInOwl:id               "PATO:0000146" ;
+        oboInOwl:inSubset         <http://purl.oboInOwllibrary.org/oboInOwl/pato#scalar_slim> , <http://purl.oboInOwllibrary.org/oboInOwl/pato#attribute_slim> .
+
+obo:ENVO_01001815  rdf:type  owl:Class ;
+        rdfs:label       "cell culturing"@en , "cell culturing" ;
+        rdfs:subClassOf  obo:OBI_0000011 ;
+        obo:IAO_0000115  "Cell culturing is the aseptic maintainance and growth of collections of cells  outside of an organisms or natural environment in a suitable culture medium." ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/ENVO> ;
+        dc:creator       <https://orcid.org/0000-0002-4366-3088> ;
+        dc:date          "2019-10-29T15:24:37Z"^^xsd:dateTime .
+
+obo:OBI_0001046  rdf:type  owl:Class ;
+        rdfs:label       "bioreactor" ;
+        rdfs:subClassOf  obo:BFO_0000040 ;
+        obo:IAO_0000111  "bioreactor" ;
+        obo:IAO_0000114  obo:IAO_0000120 ;
+        obo:IAO_0000115  "A device or system that supports a biologically active environment." ;
+        obo:IAO_0000117  "PERSON: Erik Segerdell" ;
+        obo:IAO_0000119  "http://en.wikipedia.org/wiki/Bioreactor" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> .
+
+obo:NCIT_C66962  rdf:type         owl:Class , obo:UO_0000270 ;
+        rdfs:label                "Milliliter per Hour" ;
+        obo:IAO_0000115           "A metric unit of volumetric flow rate defined as the rate at which one milliliter of matter crosses a given surface during the period of time equal to one hour." ;
+        obo:IAO_0000412           <http://purl.obolibrary.org/obo/merged/NCIT> ;
+        obo:NCIT_NHC0             "C66962" ;
+        obo:NCIT_P106             "Quantitative Concept" ;
+        obo:NCIT_P108             "Milliliter per Hour" ;
+        obo:NCIT_P207             "C0439391" ;
+        obo:NCIT_P322             "CDISC" , "UCUM" ;
+        obo:NCIT_P325             "A unit of flow rate equal to one milliliter per hour." ;
+        obo:NCIT_P366             "Milliliter_per_Hour" ;
+        oboInOwl:hasExactSynonym  "Milliliter/Hour" , "cm3/h" , "milliliter per hour" , "mL/h" , "cc/hr" , "Milliliter per Hour" , "ml/h" ;
+        oboInOwl:inSubset         <http://purl.oboInOwllibrary.org/oboInOwl/NCIT_C67567> , <http://purl.oboInOwllibrary.org/oboInOwl/NCIT_C66830> , <http://purl.oboInOwllibrary.org/oboInOwl/NCIT_C85494> , <http://purl.oboInOwllibrary.org/oboInOwl/NCIT_C61410> , <http://purl.oboInOwllibrary.org/oboInOwl/NCIT_C71620> , <http://purl.oboInOwllibrary.org/oboInOwl/NCIT_C77526> .
+
+obo:PATO_0000033  rdf:type        owl:Class ;
+        rdfs:label                "concentration of" ;
+        rdfs:subClassOf           obo:BFO_0000019 ;
+        obo:IAO_0000115           "A quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance." ;
+        obo:IAO_0000412           <http://purl.obolibrary.org/obo/merged/PATO> ;
+        oboInOwl:hasExactSynonym  "concentration" ;
+        oboInOwl:hasOBONamespace  "quality" ;
+        oboInOwl:id               "PATO:0000033" ;
+        oboInOwl:inSubset         <http://purl.oboInOwllibrary.org/oboInOwl/pato#scalar_slim> , <http://purl.oboInOwllibrary.org/oboInOwl/pato#relational_slim> , <http://purl.oboInOwllibrary.org/oboInOwl/pato#attribute_slim> .
+
+<http://project-genesis.io/ontology#GEN_000002>
+        rdf:type         owl:Class ;
+        rdfs:label       "volumetric flow rate datum" ;
+        rdfs:subClassOf  obo:IAO_0000140 .
+
+obo:BFO_0000051  rdf:type   rdf:Property ;
+        rdfs:label          "has part" ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+obo:RO_0001900  rdf:type    owl:AnnotationProperty ;
+        rdfs:label          "temporal interpretation"@en , "temporal interpretation" ;
+        rdfs:seeAlso        "https://oborel.github.io/obo-relations/temporal-semantics/"^^xsd:anyURI ;
+        rdfs:seeAlso        <http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/> ;
+        rdfs:subPropertyOf  obo:RO_0002422 ;
+        obo:IAO_0000115     "An assertion that holds between an OWL Object Property and a temporal interpretation that elucidates how OWL Class Axioms that use this property are to be interpreted in a temporal context." .
+
+obo:OBI_0000011  rdf:type  owl:Class ;
+        rdfs:label       "planned process"@en , "planned process" ;
+        rdfs:subClassOf  obo:BFO_0000015 ;
+        obo:IAO_0000111  "planned process"@en , "planned process" ;
+        obo:IAO_0000112  "Injecting mice with a vaccine in order to test its efficacy" ;
+        obo:IAO_0000114  obo:IAO_0000122 ;
+        obo:IAO_0000115  "A process that realizes a plan which is the concretization of a plan specification."@en ;
+        obo:IAO_0000116  "We are only considering successfully completed planned processes. A plan may be modified, and details added during execution. For a given planned process, the associated realized plan specification is the one encompassing all changes made during execution. This means that all processes in which an agent acts towards achieving some \nobjectives is a planned process." , "'Plan' includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn't have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)" ;
+        obo:IAO_0000117  "Bjoern Peters" ;
+        obo:IAO_0000119  "branch derived" ;
+        obo:IAO_0000232  "This class merges the previously separated objective driven process and planned process, as they the separation proved hard to maintain. (1/22/09, branch call)"@en , "6/11/9: Edited at workshop. Used to include: is initiated by an agent" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> , obo:obi.owl .
+
+rdfs:comment  rdf:type  owl:AnnotationProperty .
+
+<http://project-genesis.io/ontology#GEN_000031>
+        rdf:type         owl:Class ;
+        rdfs:label       "temperature datum" ;
+        rdfs:subClassOf  obo:IAO_0000140 .
+
+obo:UO_0000027  rdf:type  owl:NamedIndividual , obo:UO_0000005 ;
+        rdfs:label       "degree Celsius" ;
+        obo:IAO_0000111  "degree Celsius" ;
+        obo:IAO_0000115  "A temperature unit which is equal to one kelvin degree. However, they have their zeros at different points. The centigrade scale has its zero at 273.15 K." ;
+        obo:IAO_0000118  "C" , "degree C" ;
+        obo:IAO_0000412  obo:uo.owl .
+
+protege:readOnly  rdf:type  owl:AnnotationProperty .
+
+<http://project-genesis.io/ontology#GEN_000010>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:OBI_0500000 ;
+        rdfs:label          "has stated regimes" ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+oboInOwl:id  rdf:type  owl:AnnotationProperty .
+
+obo:NCIT_P106  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "Semantic_Type" ;
+        obo:IAO_0000115           "A property that represents a description of the sort of thing or category to which a concept belongs in the context of the UMLS semantic network." ;
+        obo:NCIT_NHC0             "P106" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P107             "Semantic Type" ;
+        obo:NCIT_P108             "Semantic_Type" ;
+        obo:NCIT_P98              "In general, applying semantic types aids in allowing users (or computer programs) to draw conclusions about concepts by virtue of the categories to which they have been assigned.  We use a set of semantic types developed for the UMLS Metathesaurus. There are currently 134 semantic types in the UMLS." ;
+        oboInOwl:hasExactSynonym  "Semantic_Type" .
+
+obo:IAO_0000039  rdf:type   owl:FunctionalProperty , owl:ObjectProperty , rdf:Property ;
+        rdfs:label          "has measurement unit label"@en , "has measurement unit label" ;
+        rdfs:range          obo:IAO_0000003 ;
+        rdfs:subPropertyOf  obo:BFO_0000051 ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/IAO> .
+
+obo:BFO_0000180  rdf:type   owl:AnnotationProperty ;
+        rdfs:label          "BFO CLIF specification label"@en ;
+        rdfs:subPropertyOf  rdfs:label ;
+        obo:IAO_0000115     "Relates an entity in the ontology to the term that is used to represent it in the the CLIF specification of BFO2"@en ;
+        obo:IAO_0000119     "Person:Alan Ruttenberg" ;
+        obo:IAO_0000232     "Really of interest to developers only"@en .
+
+efo:definition  rdf:type  owl:AnnotationProperty .
+
+obo:UO_0000098  rdf:type  owl:NamedIndividual , obo:UO_0000095 ;
+        rdfs:label       "milliliter" ;
+        obo:IAO_0000111  "milliliter" ;
+        obo:IAO_0000115  "A volume unit which is equal to one thousandth of a liter or 10^[-3] L, or to 1 cubic centimeter." ;
+        obo:IAO_0000118  "ml" ;
+        obo:IAO_0000412  obo:uo.owl .
+
+obo:IAO_0000118  rdf:type  owl:AnnotationProperty ;
+        rdfs:comment      "Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related)." ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "alternative term"@en , "alternative label"@en ;
+        obo:IAO_0000111   "alternative label"@en , "alternative term"@en ;
+        obo:IAO_0000114   obo:IAO_0000125 ;
+        obo:IAO_0000115   "A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like."@en , "An alternative name for a class or property which means the same thing as the preferred name (semantically equivalent)"@en ;
+        obo:IAO_0000117   "PERSON:Daniel Schober"@en , "OBO Operations committee" ;
+        obo:IAO_0000119   "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en .
+
+<http://project-genesis.io/ontology#GEN_000039>
+        rdf:type            rdf:Property ;
+        rdfs:label          "is collection of" ;
+        rdfs:range          rdf:List ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+<http://project-genesis.io/ontology#GEN_000018>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:ENVO_01001815 ;
+        rdfs:label          "has specified regime" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000003> ;
+        rdfs:subPropertyOf  obo:OBI_0000293 .
+
+obo:IAO_0000602  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  obo:iao.owl ;
+        rdfs:label        "has associated axiom(fol)"@en .
+
+obo:BFO_0000004  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "independent continuant"@en , "independent continuant" ;
+        rdfs:subClassOf   obo:BFO_0000002 ;
+        obo:BFO_0000179   "ic" ;
+        obo:BFO_0000180   "IndependentContinuant" ;
+        obo:IAO_0000112   "an orchestra."@en , "a molecule"@en , "a chair"@en , "an atom"@en , "an organism"@en , "the interior of your mouth"@en , "a heart"@en , "a spatial region"@en , "a leg"@en , "the bottom right portion of a human torso"@en ;
+        obo:IAO_0000115   "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])"@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000601   "For any independent continuant b and any time t there is some spatial region r such that b is located_in r at t. (axiom label in BFO2 Reference: [134-001])"@en , "For every independent continuant b and time t during the region of time spanned by its life, there are entities which s-depends_on b during t. (axiom label in BFO2 Reference: [018-002])"@en ;
+        obo:IAO_0000602   "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] " , "(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] " , "(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] " .
+
+obo:OBI_0001938  rdf:type   rdf:Property , owl:ObjectProperty ;
+        rdfs:domain         obo:IAO_0000030 ;
+        rdfs:label          "has value specification" ;
+        rdfs:range          obo:OBI_0001933 ;
+        rdfs:subPropertyOf  obo:BFO_0000051 ;
+        obo:IAO_0000111     "has value specification" ;
+        obo:IAO_0000114     obo:IAO_0000120 ;
+        obo:IAO_0000115     "A relation between an information content entity and a value specification that specifies its value." ;
+        obo:IAO_0000117     "PERSON: James A. Overton" ;
+        obo:IAO_0000119     "OBI" ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/OBI> .
+
+rdfs:isDefinedBy  rdf:type  owl:AnnotationProperty ;
+        rdfs:isDefinedBy  <http://www.w3.org/2000/01/rdf-schema.owl> .
+
+<http://project-genesis.io/ontology#GEN_000026>
+        rdf:type         owl:Class ;
+        rdfs:label       "gene count value specification" ;
+        rdfs:subClassOf  obo:OBI_0001933 .
+
+<http://project-genesis.io/ontology#GEN_000005>
+        rdf:type         owl:Class ;
+        rdfs:label       "pH value specification" ;
+        rdfs:subClassOf  obo:OBI_0001933 .
+
+obo:PATO_0002243  rdf:type        owl:Class ;
+        rdfs:label                "fluid flow rate" ;
+        rdfs:subClassOf           obo:BFO_0000019 ;
+        obo:IAO_0000115           "A physical quality inhering in a fluid (liquid or gas) by virtue of the amount of fluid which passes through a given surface per unit time." ;
+        obo:IAO_0000412           <http://purl.obolibrary.org/obo/merged/PATO> ;
+        terms:contributor         <https://orcid.org/0000-0002-2061-091X> ;
+        oboInOwl:creation_date    "2010-07-28T03:00:20Z" ;
+        oboInOwl:hasExactSynonym  "volumetric flow rate" , "volume flow rate" ;
+        oboInOwl:hasOBONamespace  "quality" ;
+        oboInOwl:id               "PATO:0002243" ;
+        oboInOwl:inSubset         <http://purl.oboInOwllibrary.org/oboInOwl/pato#scalar_slim> , <http://purl.oboInOwllibrary.org/oboInOwl/pato#attribute_slim> .
+
+<http://www.semanticweb.org/genesis/ontologies/ccp-ontology/>
+        rdf:type  owl:Ontology .
+
+obo:STATO_0000047  rdf:type  owl:Class ;
+        rdfs:label         "count"@en , "count" ;
+        rdfs:subClassOf    obo:IAO_0000109 ;
+        obo:IAO_0000112    "a count of 4 resulting from counting limbs in humans"@en ;
+        obo:IAO_0000114    obo:IAO_0000122 ;
+        obo:IAO_0000115    "a count is a data item denoted by an integer and represented the number of instances or occurences of an entity"@en ;
+        obo:IAO_0000117    "Orlaith Burke" , "Alejandra Gonzalez-Beltran"@en , "Philippe Rocca-Serra"@en ;
+        obo:IAO_0000119    "STATO"@en ;
+        obo:IAO_0000412    <http://purl.obolibrary.org/obo/merged/STATO> ;
+        obo:STATO_0000032  ""@en .
+
+oboInOwl:is_metadata_tag
+        rdf:type  owl:AnnotationProperty .
+
+terms:contributor  rdf:type       owl:AnnotationProperty ;
+        rdfs:label                "contributor" ;
+        oboInOwl:hasDbXref        "http://purl.org/dc/terms/contributor" ;
+        oboInOwl:hasOBONamespace  "uberon" ;
+        oboInOwl:id               "dc-contributor" ;
+        oboInOwl:is_metadata_tag  true ;
+        oboInOwl:shorthand        "dc-contributor" .
+
+obo:UO_0000051  rdf:type  owl:Class ;
+        rdfs:label       "concentration unit" ;
+        rdfs:subClassOf  obo:IAO_0000003 ;
+        obo:IAO_0000111  "concentration unit" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> , obo:uo.owl .
+
+obo:GENEPIO_0002113  rdf:type  owl:Class ;
+        rdfs:label       "time value specification"@en , "time value specification" ;
+        rdfs:subClassOf  obo:OBI_0001933 ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/GENEPIO> .
+
+obo:NCIT_C128793  rdf:type        owl:Class ;
+        rdfs:label                "Microplate Well" ;
+        rdfs:subClassOf           obo:BFO_0000040 ;
+        obo:IAO_0000115           "Any of the individual wells on a microwell plate." ;
+        obo:IAO_0000412           <http://purl.obolibrary.org/obo/merged/NCIT> ;
+        obo:NCIT_NHC0             "C128793" ;
+        obo:NCIT_P106             "Spatial Concept" ;
+        obo:NCIT_P108             "Microplate Well" ;
+        obo:NCIT_P208             "CL509802" ;
+        oboInOwl:hasExactSynonym  "Microplate Well" , "Plate Well" , "Well" .
+
+<http://project-genesis.io/ontology#GEN_000034>
+        rdf:type         owl:Class ;
+        rdfs:label       "process duration datum" ;
+        rdfs:subClassOf  obo:IAO_0000027 .
+
+obo:NCIT_P322  rdf:type           owl:AnnotationProperty ;
+        rdfs:label                "Contributing_Source" ;
+        obo:IAO_0000115           "A property is used to indicate when a non-EVS entity has contributed to, and has a stake in, a concept. This is used where such entities, within or outside NCI, have indicated the need to be able to track their own concepts. A single concept can have multiple instances of this property if multiple entities have such a defined stake." ;
+        obo:NCIT_NHC0             "P322" ;
+        obo:NCIT_P106             "Conceptual Entity" ;
+        obo:NCIT_P107             "Contributing Source" ;
+        obo:NCIT_P108             "Contributing_Source" ;
+        oboInOwl:hasExactSynonym  "Contributing_Source" .
+
+<http://project-genesis.io/ontology#GEN_000013>
+        rdf:type            rdf:Property ;
+        rdfs:domain         <http://project-genesis.io/ontology#GEN_000003> ;
+        rdfs:label          "has stated pH" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000032> ;
+        rdfs:subPropertyOf  obo:BFO_0000051 .
+
+obo:BFO_0000020  rdf:type  owl:Class ;
+        rdfs:isDefinedBy  obo:bfo.owl ;
+        rdfs:label        "specifically dependent continuant"@en , "specifically dependent continuant" ;
+        rdfs:subClassOf   obo:BFO_0000002 ;
+        obo:BFO_0000179   "sdc" ;
+        obo:BFO_0000180   "SpecificallyDependentContinuant" ;
+        obo:IAO_0000112   "of one-sided specifically dependent continuants: the mass of this tomato"@en , "the smell of this portion of mozzarella"@en , "the shape of this hole."@en , "the pink color of a medium rare piece of grilled filet mignon at its center"@en , "the function of this heart: to pump blood"@en , "the mutual dependence of the role predator and the role prey as played by two organisms in a given interaction"@en , "the disposition of this fish to decay"@en , "Reciprocal specifically dependent continuants: the function of this key to open this lock and the mutually dependent disposition of this lock: to be opened by this key"@en , "the role of being a doctor"@en , "the mutual dependence of proton donors and acceptors in chemical reactions [79"@en , "of relational dependent continuants (multiple bearers): John’s love for Mary, the ownership relation between John and this statue, the relation of authority between John and his subordinates."@en ;
+        obo:IAO_0000115   "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])"@en ;
+        obo:IAO_0000116   "Specifically dependent continuant doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. We're not sure what else will develop here, but for example there are questions such as what are promises, obligation, etc."@en ;
+        obo:IAO_0000412   <http://purl.obolibrary.org/obo/merged/BFO> ;
+        obo:IAO_0000602   "(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] " .
+
+obo:IAO_0000142  rdf:type   owl:ObjectProperty , rdf:Property ;
+        rdfs:label          "mentions" , "mentions"@en ;
+        rdfs:subPropertyOf  obo:IAO_0000136 ;
+        obo:IAO_0000114     obo:IAO_0000125 ;
+        obo:IAO_0000115     "An information artifact IA mentions an entity E exactly when it has a component/part that denotes E"@en ;
+        obo:IAO_0000116     "7/6/2009 Alan Ruttenberg. P4 RC1 munges our GCI so remove it for now: mentions some entity equivalentTo has_part some ('generically denotes' some entity)"@en , "7/6/2009 Alan Ruttenberg: Add this relation following conversation with Jonathan Rees that N&S GCI for is_about was too strong. Really it was simply sufficient. To effect this change we introduce this relation, which is subproperty of is_about, and have previous GCI use this relation \"mentions\" in it's (logical) definition"@en ;
+        obo:IAO_0000117     "Person: Alan Ruttenberg"@en , "PERSON: Jonathan Rees"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/IAO> .
+
+rdfs:Class  rdf:type     owl:Class ;
+        rdfs:label       "Class" ;
+        rdfs:subClassOf  rdfs:Class .
+
+obo:OBI_0001933  rdf:type  owl:Class ;
+        rdfs:label       "value specification" ;
+        rdfs:subClassOf  obo:IAO_0000030 ;
+        obo:IAO_0000111  "value specification" ;
+        obo:IAO_0000112  "The value of 'positive' in a classification scheme of \"positive or negative\"; the value of '20g' on the quantitative scale of mass." ;
+        obo:IAO_0000114  obo:IAO_0000122 ;
+        obo:IAO_0000115  "An information content entity that specifies a value within a classification scheme or on a quantitative scale." ;
+        obo:IAO_0000116  "This term is currently a descendant of 'information content entity', which requires that it 'is about' something. A value specification of '20g' for a measurement data item of the mass of a particular mouse 'is about' the mass of that mouse. However there are cases where a value specification is not clearly about any particular. In the future we may change 'value specification' to remove the 'is about' requirement." ;
+        obo:IAO_0000117  "PERSON:Bjoern Peters" ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> .
+
+oboInOwl:hasOBONamespace
+        rdf:type    owl:AnnotationProperty ;
+        rdfs:label  "has_obo_namespace" .
+
+obo:IAO_0000100  rdf:type  owl:Class ;
+        rdfs:label       "data set"@en , "data set" ;
+        rdfs:subClassOf  obo:IAO_0000027 ;
+        obo:IAO_0000111  "data set"@en ;
+        obo:IAO_0000112  "Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves)."@en ;
+        obo:IAO_0000114  obo:IAO_0000125 ;
+        obo:IAO_0000115  "A data item that is an aggregate of other data items of the same type that have something in common. Averages and distributions can be determined for data sets."@en ;
+        obo:IAO_0000116  "2009/10/23 Alan Ruttenberg. The intention is that this term represent collections of like data. So this isn't for, e.g. the whole contents of a cel file, which includes parameters, metadata etc. This is more like java arrays of a certain rather specific type"@en , "2014-05-05: Data sets are aggregates and thus must include two or more data items. We have chosen not to add logical axioms to make this restriction." ;
+        obo:IAO_0000117  "person:Chris Stoeckert"@en , "person:Allyson Lister"@en ;
+        obo:IAO_0000119  "OBI_0000042"@en , "group:OBI"@en ;
+        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/IAO> .
+
+<http://project-genesis.io/ontology#GEN_000021>
+        rdf:type            rdf:Property ;
+        rdfs:domain         obo:OBI_0000744 ;
+        rdfs:label          "has specified sampling time" ;
+        rdfs:range          <http://project-genesis.io/ontology#GEN_000029> ;
+        rdfs:subPropertyOf  obo:OBI_0000293 .
+
+rdfs:label  rdf:type      owl:AnnotationProperty ;
+        rdfs:isDefinedBy  <http://www.w3.org/2000/01/rdf-schema.owl> ;
+        rdfs:label        "label"@en , "label" ;
+        obo:IAO_0000111   "label"@en , "label" .
+
+obo:IAO_0000413  rdf:type   rdf:Property , owl:ObjectProperty ;
+        rdfs:domain         <http://project-genesis.io/ontology#GEN_000034> ;
+        rdfs:label          "is duration of"@en , "is duration of" ;
+        rdfs:range          obo:BFO_0000015 ;
+        rdfs:subPropertyOf  obo:IAO_0000136 ;
+        obo:IAO_0000114     obo:IAO_0000120 ;
+        obo:IAO_0000115     "relates a process to a time-measurement-datum that represents the duration of the process"@en ;
+        obo:IAO_0000117     "Person:Alan Ruttenberg"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/IAO> .
+
+obo:IAO_0000221  rdf:type   rdf:Property , owl:ObjectProperty ;
+        rdfs:domain         obo:IAO_0000109 ;
+        rdfs:label          "is quality measurement of"@en , "is quality measurement of" ;
+        rdfs:range          obo:BFO_0000019 ;
+        rdfs:subPropertyOf  obo:IAO_0000136 ;
+        obo:IAO_0000115     "m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q"@en ;
+        obo:IAO_0000116     "This one is the one we are struggling with at the moment. The issue is what a measurement measures. On the one hand saying that it measures the quality would include it \"measuring\" the bearer = referring to the bearer in the measurement. However this makes comparisons of two different things not possible. On the other hand not having it inhere in the bearer, on the face of it, breaks the audit trail.\n\nWerner suggests a solution based on \"Magnitudes\" a proposal for which we are awaiting details."@en , "From the second IAO workshop [Alan Ruttenberg 8/6/2009: not completely current, though bringing in comparison is probably important]\n\nThis one is the one we are struggling with at the moment. The issue is what a measurement measures. On the one hand saying that it measures the quality would include it \"measuring\" the bearer = referring to the bearer in the measurement. However this makes comparisons of two different things not possible. On the other hand not having it inhere in the bearer, on the face of it, breaks the audit trail.\n\nWerner suggests a solution based on \"Magnitudes\" a proposal for which we are awaiting details.\n--\nFrom the second IAO workshop, various comments, [commented on by Alan Ruttenberg 8/6/2009]\n\nunit of measure is a quality, e.g. the length of a ruler.\n\n[We decided to hedge on what units of measure are, instead talking about measurement unit labels, which are the information content entities that are about whatever measurement units are. For IAO we need that information entity in any case. See the term measurement unit label]\n\n[Some struggling with the various subflavors of is_about. We subsequently removed the relation represents, and describes until and only when we have a better theory]\n\na represents b means either a denotes b or a describes\n\ndescribe:\na describes b means a is about b and a allows an inference of at least one quality of b\n\nWe have had a long discussion about denotes versus describes."@en , "From the second meeting on IAO:\n\nAn attempt at defining assay using Barry's \"reliability\" wording\n\nassay:\nprocess and has_input some material entity\nand has_output some information content entity \nand which is such that instances of this process type reliably generate \noutputs that describes the input."@en , "From the second IAO workshop: An attempt at tieing the quality to the measurement datum more carefully.\n\na is a magnitude means a is a determinate quality particular inhering in some bearer b existing at a time t that can be represented/denoted by an information content entity e that has parts denoting a unit of measure, a number, and b. The unit of measure is an instance of the determinable quality."@en , "8/6/2009 Alan Ruttenberg: The strategy is to be rather specific with this relationship. There are other kinds of measurements that are not of qualities, such as those that measure time. We will add these as separate properties for the moment and see about generalizing later"@en ;
+        obo:IAO_0000117     "Alan Ruttenberg"@en ;
+        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/IAO> ;
+        owl:inverseOf       obo:IAO_0000417 .
