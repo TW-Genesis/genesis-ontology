@@ -1,4 +1,4 @@
-@prefix :         <http://ontofox.hegroup.org/4xnfp0p2.owl#> .
+@prefix :         <http://ontofox.hegroup.org/k6s9jzvz.owl#> .
 @prefix dc:       <http://purl.org/dc/elements/1.1/> .
 @prefix efo:      <http://www.ebi.ac.uk/efo/> .
 @prefix obo:      <http://purl.obolibrary.org/obo/> .
@@ -81,14 +81,13 @@ obo:NCIT_A32  rdf:type            owl:AnnotationProperty ;
         oboInOwl:hasExactSynonym  "Is_Value_For_GDC_Property" .
 
 obo:FOODON_03411345  rdf:type  owl:Class ;
-        rdfs:label          "yeast"@en , "yeast" ;
+        rdfs:label          "yeast" , "yeast"@en ;
         rdfs:subClassOf     obo:BFO_0000040 ;
         obo:IAO_0000114     obo:IAO_0000428 ;
         obo:IAO_0000115     "Yeasts are eukaryotic micro-organisms classified in the kingdom *Fungi*, with 1,500 species currently described estimated to be only 1% of all fungal species."@en ;
         obo:IAO_0000119     "WIKIPEDIA:Yeast" ;
-        obo:IAO_0000412     "http://langual.org" ;
-        obo:IAO_0000412     <http://purl.obolibrary.org/obo/merged/FOODON> ;
-        oboInOwl:hasDbXref  "http://www.langual.org/langual_thesaurus.asp?termid=B1345" .
+        obo:IAO_0000412     <http://langual.org> , <http://purl.obolibrary.org/obo/merged/FOODON> ;
+        oboInOwl:hasDbXref  <http://www.langual.org/langual_thesaurus.asp?termid=B1345> .
 
 obo:IAO_0000116  rdf:type  owl:AnnotationProperty ;
         rdfs:isDefinedBy  obo:iao.owl ;
@@ -210,6 +209,9 @@ obo:CHEBI_23367  rdf:type           owl:Class ;
         rdfs:label       "cell culturing regime" ;
         rdfs:subClassOf  obo:IAO_0000030 ;
         obo:IAO_0000115  "Specification of the controllable physical and chemical conditions within a bioreactor" .
+
+<http://project-genesis.io/ontology/>
+        rdf:type  owl:Ontology .
 
 obo:BFO_0000031  rdf:type  owl:Class ;
         rdfs:isDefinedBy  obo:bfo.owl ;
@@ -349,7 +351,7 @@ obo:OBI_0000070  rdf:type  owl:Class ;
         obo:IAO_0000112  "Assay the wavelength of light emitted by excited Neon atoms. Count of geese flying over a house." ;
         obo:IAO_0000114  obo:IAO_0000122 ;
         obo:IAO_0000115  "A planned process with the objective to produce information about the material entity that is the evaluant, by physically examining it or its proxies."@en ;
-        obo:IAO_0000116  "12/3/12: BP: the reference to the 'physical examination' is included to point out that a prediction is not an assay, as that does not require physical examiniation. " ;
+        obo:IAO_0000116  "12/3/12: BP: the reference to the 'physical examination' is included to point out that a prediction is not an assay, as that does not require physical examiniation." ;
         obo:IAO_0000117  "PlanAndPlannedProcess Branch"@en ;
         obo:IAO_0000118  "scientific observation"@en , "measuring"@en ;
         obo:IAO_0000119  "OBI branch derived"@en ;
@@ -1182,9 +1184,6 @@ obo:PATO_0002243  rdf:type        owl:Class ;
         oboInOwl:id               "PATO:0002243" ;
         oboInOwl:inSubset         <http://purl.oboInOwllibrary.org/oboInOwl/pato#scalar_slim> , <http://purl.oboInOwllibrary.org/oboInOwl/pato#attribute_slim> .
 
-<http://www.semanticweb.org/genesis/ontologies/ccp-ontology/>
-        rdf:type  owl:Ontology .
-
 obo:STATO_0000047  rdf:type  owl:Class ;
         rdfs:label         "count"@en , "count" ;
         rdfs:subClassOf    obo:IAO_0000109 ;
@@ -1214,9 +1213,8 @@ obo:UO_0000051  rdf:type  owl:Class ;
         obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/OBI> , obo:uo.owl .
 
 obo:GENEPIO_0002113  rdf:type  owl:Class ;
-        rdfs:label       "time value specification"@en , "time value specification" ;
-        rdfs:subClassOf  obo:OBI_0001933 ;
-        obo:IAO_0000412  <http://purl.obolibrary.org/obo/merged/GENEPIO> .
+        rdfs:label       "time value specification" ;
+        rdfs:subClassOf  obo:OBI_0001933 .
 
 obo:NCIT_C128793  rdf:type        owl:Class ;
         rdfs:label                "Microplate Well" ;
