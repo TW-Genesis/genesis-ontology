@@ -23,5 +23,5 @@ This standard operating procedure (SOP) details how to ingest a new dataset to G
 
 ## Case A: unable to map fields to ontology terms
 
-1. Follow the SOP for updating and creating new ontology terms.
+1. Contact the ontology maintainer (see repository information) regarding updating and creating new ontology terms.
 2. Return to step 2. above.
